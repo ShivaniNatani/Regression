@@ -10,7 +10,7 @@ COPY . .
 # Run the command to install any needed packages specified in requirements.txt
 # If your script requires any external libraries, make sure to include a requirements.txt file
 # and uncomment the next line.
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
@@ -19,4 +19,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run read_pickle.py when the container launches
-CMD ["python", "./predictor.py", "model.pkl"]
+CMD ["python", "./predictor.py"]

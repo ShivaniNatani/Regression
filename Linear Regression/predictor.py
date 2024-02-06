@@ -9,14 +9,16 @@ def read_pickle_file(file_path):
     with open(file_path, 'rb') as f:
         data = pickle.load(f)
     
-    print(data)
-    return data
+        #print(data)
+        return data
 
 def predict(model):
     # Making a prediction
     test_data = np.array([[6]])
     prediction = model.predict(test_data)
     print(f"Prediction for {test_data[0][0]}: {prediction[0]}")
+
+    #prediction
 
 if __name__ == '__main__':
     import sys
